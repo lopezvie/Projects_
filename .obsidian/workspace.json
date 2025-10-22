@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ignition/Ignition - Database.md",
+                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ignition - Database"
+              "title": "CH1"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ignition/Ignition - Database.md",
+                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Ignition - Database"
+              "title": "Backlinks for CH1"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ignition/Ignition - Database.md",
+                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Ignition - Database"
+              "title": "Outgoing links from CH1"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ignition/Ignition - Database.md",
+                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Ignition - Database"
+              "title": "Outline of CH1"
             }
           }
         ]
@@ -169,8 +169,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "b0f02c89bb367ce2",
+  "active": "1c5552bcf76ea4cb",
   "lastOpenFiles": [
+    "Ignition/Ignition - Database.md",
+    "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
+    "Notes/My Notes/Study/Signals and Systems/CH1",
     "Notes/My Notes/Study/Computer Science/C",
     "Notes/My Notes/Study/Computer Science/C++",
     "Notes/My Notes/Study/Computer Science/Python",
@@ -180,9 +183,6 @@
     "Notes/My Notes/Study/Signals and Systems",
     "Notes/My Notes/Study",
     "Notes/My Notes",
-    "Notes",
-    "Ignition/Ignition - Database.md",
-    "Welcome.md",
-    "Ignition"
+    "Welcome.md"
   ]
 }
