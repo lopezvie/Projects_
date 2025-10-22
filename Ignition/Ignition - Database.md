@@ -1,9 +1,9 @@
 
 
 ```Python
-sasName = 'PowerBI_OEEDowntimes' #Analysis Name
-TABLE_NAME = 'OEEDowntimes'      # Table Name
-DW_DATABASE = 'IBY_IGN_PowerBI'  # Ignition Connection Setup to Datbase
+sasName = 'PowerBI_OEEDowntimes'
+TABLE_NAME = 'OEEDowntimes'
+DW_DATABASE = 'IBY_IGN_PowerBI'
 LAST_SCAN_TAG_PATH = '[default]Analysis_Generator/IBY/LAST_SCAN'
 IF_INITIALIZED_PATH = '[default]Analysis_Generator/IBY/IF_INITIALIZED'
 
@@ -59,33 +59,37 @@ else:
 				equipment = str(ds.getValueAt(r, 'Line Downtime Equipment Name') or '')
 				productCode = str(ds.getValueAt(r, 'Running Can Size') or '')
 
-				# --- Derive Shift directly from From Time Stamp ---
+				# --- Derive Shift from From Time Stamp ---
 				shiftNum = 0
 				if fromTS is not None:
 					hour = system.date.getHour24(fromTS)
 					minute = system.date.getMinute(fromTS)
 					totalMins = hour * 60 + minute
-					if totalMins >= 390 and totalMins < 870:
+					if totalMins >= 390 and totalMins < 870:       # 06:30–14:30
 						shiftNum = 1
-					elif totalMins >= 870 and totalMins < 1350:
+					elif totalMins >= 870 and totalMins < 1350:    # 14:30–22:30
 						shiftNum = 2
-					else:
+					else:                                          # 22:30–06:30
 						shiftNum = 3
 
-				# Skip Running events
+				# --- Skip "Running" events ---
 				if lineStateType.strip().lower() == 'running':
 					continue
 
-				fromTSVal = fromTS if fromTS is not None else ''
+				# --- Timestamp normalization ---
+				fromTSVal = fromTS if fromTS is not None else now
 				toTSVal = toTS if toTS is not None else now
-				beginVal = beginTS if beginTS is not None else ''
-				endVal = endTS if endTS is not None else ''
-				filterTime = system.date.format(beginTS, 'HH:mm:ss') if beginTS is not None else ''
-				filterDate = system.date.format(fromTS, 'yyyy-MM-dd') if fromTS is not None else ''
+				beginKey = beginTS if beginTS is not None else fromTS  # stable key
+				if beginKey is None:
+					continue  # skip rows with no valid start
+				beginVal = beginKey
+				endVal = endTS if endTS is not None else now
+				filterTime = system.date.format(beginKey, 'HH:mm:ss') if beginKey is not None else system.date.format(now, 'HH:mm:ss')
+				filterDate = system.date.format(fromTS, 'yyyy-MM-dd') if fromTS is not None else system.date.format(now, 'yyyy-MM-dd')
 				currentDate = system.date.format(now, 'yyyy-MM-dd')
 				prevDate = system.date.format(system.date.addDays(now, -1), 'yyyy-MM-dd')
 
-				# --- Proper datasource-safe existence check ---
+				# --- Check if this (Line, Begin) pair exists ---
 				existingDS = system.db.runPrepQuery(
 					"SELECT COUNT(*) AS cnt FROM OEEDowntimes WHERE [LineStateEventBegin]=? AND [Line]=?",
 					[beginVal, lineName],
@@ -95,7 +99,7 @@ else:
 				if existingDS and len(existingDS) > 0:
 					existing = existingDS[0]['cnt']
 
-				# --- Update existing row or insert new one ---
+				# --- Update or Insert ---
 				if existing and existing > 0:
 					system.db.runPrepUpdate(
 						"UPDATE OEEDowntimes SET [LineStateEventEnd]=?, [ToTimeStamp]=? WHERE [LineStateEventBegin]=? AND [Line]=?",
@@ -139,6 +143,5 @@ else:
 				logger.error('Insert failed for ' + eqPath + ' row ' + str(r) + ': ' + str(e))
 	if validData:
 		system.tag.writeBlocking([LAST_SCAN_TAG_PATH], [now])
-
 
 ```
