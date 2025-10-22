@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
+                "file": "Notes/My Notes/Study/Math/Calculus/Calc.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CH1"
+              "title": "Calc"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
+                "file": "Notes/My Notes/Study/Math/Calculus/Calc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CH1"
+              "title": "Backlinks for Calc"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
+                "file": "Notes/My Notes/Study/Math/Calculus/Calc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from CH1"
+              "title": "Outgoing links from Calc"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
+                "file": "Notes/My Notes/Study/Math/Calculus/Calc.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CH1"
+              "title": "Outline of Calc"
             }
           }
         ]
@@ -171,8 +171,10 @@
   },
   "active": "1c5552bcf76ea4cb",
   "lastOpenFiles": [
-    "Ignition/Ignition - Database.md",
     "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
+    "Notes/My Notes/Study/Math/Calculus/Calc.md",
+    "Notes/My Notes/Study/Math/Calculus",
+    "Ignition/Ignition - Database.md",
     "Notes/My Notes/Study/Signals and Systems/CH1",
     "Notes/My Notes/Study/Computer Science/C",
     "Notes/My Notes/Study/Computer Science/C++",
@@ -182,7 +184,6 @@
     "Notes/My Notes/Study/Computer Science",
     "Notes/My Notes/Study/Signals and Systems",
     "Notes/My Notes/Study",
-    "Notes/My Notes",
     "Welcome.md"
   ]
 }
