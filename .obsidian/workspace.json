@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ignition/Ignition - Database.md",
+                "file": "Notes/My Notes/Study/Signals and Systems/What a Control System Is, and Why Feedback Exists.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ignition - Database"
+              "title": "What a Control System Is, and Why Feedback Exists"
             }
           }
         ]
@@ -171,6 +171,8 @@
   },
   "active": "1c5552bcf76ea4cb",
   "lastOpenFiles": [
+    "Ignition/Ignition - Database.md",
+    "Notes/My Notes/Study/Signals and Systems/What a Control System Is, and Why Feedback Exists.md",
     "Work/IRW/PBWR/C1/BEER PUMP.md",
     "Notes/My Notes/Study/Math/Calculus/Calc.md",
     "Work/IRW/PBWR/C1",
@@ -184,7 +186,6 @@
     "Work/IRW",
     "Work",
     "Notes/My Notes/Study/Signals and Systems/CH1/CH1.md",
-    "Ignition/Ignition - Database.md",
     "Welcome.md"
   ]
 }

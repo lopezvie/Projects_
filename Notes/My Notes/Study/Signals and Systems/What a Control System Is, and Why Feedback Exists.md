@@ -1,0 +1,2 @@
+
+A control system is an arrangement of physical or computational components that interact to cause a selected quantity, called the controlled variable, to follow a prescribed behavior in spite of disturbances and model imperfections. The object being acted upon is the plant. 
