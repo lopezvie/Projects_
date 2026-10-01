@@ -39,6 +39,9 @@
     <ClCompile Include="TreasuryController.cpp">
       <Filter>Source Files\Core\Simulation</Filter>
     </ClCompile>
+    <ClCompile Include="Economy.cpp">
+      <Filter>Source Files\Core\Simulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NationValidator.h">
@@ -54,6 +57,9 @@
       <Filter>Source Files\Core\Simulation</Filter>
     </ClInclude>
     <ClInclude Include="TreasuryController.h">
+      <Filter>Source Files\Core\Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="Economy.h">
       <Filter>Source Files\Core\Simulation</Filter>
     </ClInclude>
   </ItemGroup>

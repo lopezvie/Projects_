@@ -17,8 +17,14 @@ namespace ModernWarCore
 				return "TurnNumber limit reached";
 			else
 			{
-				world.TurnNumber++;
-				return "";
+				std::string economy_settle = ModernWarCore::ApplyEconomy(world);
+				if (economy_settle.empty())
+				{
+					world.TurnNumber++;
+					return "";
+				}
+				else
+					return economy_settle;
 			}
 		}
 	}

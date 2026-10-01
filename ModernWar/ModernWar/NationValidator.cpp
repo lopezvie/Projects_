@@ -15,6 +15,10 @@ namespace ModernWarCore
 			return "StrategicScore must be >= 0";
 		else if (nation.CapitalTerritoryId == 0)
 			return "CapitalTerritoryId must be > 0";
+		else if (nation.IncomePerTurn < 0)
+			return "IncomePerTurn must be >= 0";
+		else if (nation.ExpensesPerTurn < 0)
+			return "ExpensesPerTurn must be >= 0";
 		else
 			return "";
 	}

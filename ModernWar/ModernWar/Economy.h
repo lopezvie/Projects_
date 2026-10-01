@@ -1,10 +1,12 @@
 #pragma once
 #include <string>
+
 #include "WorldState.h"
 #include "NationValidator.h"
-#include "Economy.h"
+#include "TreasuryController.h"
+
 
 namespace ModernWarCore
 {
-	std::string AdvanceTurn(WorldState& world);
+	std::string ApplyEconomy(WorldState& world);
 }
