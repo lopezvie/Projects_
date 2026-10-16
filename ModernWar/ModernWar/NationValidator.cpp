@@ -23,22 +23,41 @@ namespace ModernWarCore
 			return "";
 	}
 
-	std::string ValidateRoster(const std::array<NationState, 2>& nations)
+	std::string ValidateRoster(const std::vector<NationState>& nations)
 	{
-		std::string result1 = ModernWarCore::ValidateNation(nations[0]);
-		if (!result1.empty())
-			return "Roster[0]: " + result1;
-		else
+		if (nations.empty())
 		{
-			std::string result2 = ModernWarCore::ValidateNation(nations[1]);
-			if (!result2.empty())
-				return "Roster[1]: " + result2;
-			else if (nations[0].NationId == nations[1].NationId)
-				return "Duplicate NationId";
-			else if (nations[0].CapitalTerritoryId == nations[1].CapitalTerritoryId)
-				return "Duplicate CapitalTerritoryId";
-			else
-				return "";
+			return "Error: Invalid Startup Rooster";
 		}
+		for (auto position = 0; position < nations.size(); position++)
+		{
+			std::string result = ModernWarCore::ValidateNation(nations[position]);
+			if (!result.empty())
+				return "Roster[" + std::to_string(position) + "]: " + result;
+			std::uint32_t id_to_check = nations[position].NationId;
+			if (position != 0)
+			{
+				for (auto inner_position = 0; inner_position < position; inner_position++)
+				{
+					if (nations[inner_position].NationId == id_to_check)
+					{
+						return "Duplicate NationId";
+					}
+				}
+			}
+			id_to_check = nations[position].CapitalTerritoryId;
+			if (position != 0)
+			{
+				for (auto inner_position = 0; inner_position < position; inner_position++)
+				{
+					if (nations[inner_position].CapitalTerritoryId == id_to_check)
+					{
+						return "Duplicate CapitalTerritoryId";;
+					}
+				}
+			}
+		}
+
+		return "";
 	}
 }
