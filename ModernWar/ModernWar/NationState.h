@@ -11,5 +11,7 @@ namespace ModernWarCore
 		std::int64_t Treasury = 0;
 		std::int32_t StrategicScore = 0;
 		std::uint32_t CapitalTerritoryId = 0;
+		std::int64_t IncomePerTurn = 0;
+		std::int64_t ExpensesPerTurn = 0;
 	};
 }

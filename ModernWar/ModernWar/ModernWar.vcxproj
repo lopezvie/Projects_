@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Economy.cpp" />
     <ClCompile Include="ModernWar.cpp" />
     <ClCompile Include="NationValidator.cpp" />
     <ClCompile Include="TreasuryController.cpp" />
     <ClCompile Include="TurnController.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Economy.h" />
     <ClInclude Include="NationState.h" />
     <ClInclude Include="NationValidator.h" />
     <ClInclude Include="TreasuryController.h" />

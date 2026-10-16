@@ -2,6 +2,7 @@
 #include <string>
 #include "WorldState.h"
 #include "NationValidator.h"
+#include "Economy.h"
 
 namespace ModernWarCore
 {
